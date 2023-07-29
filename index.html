@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Join Now and meet tonight ! </title>
+  <link rel="icon" type="image/x-icon" href="https://i.postimg.cc/FKwhqhjk/download.png">
+</head>
+<div class="container">
+ <div class="label">
+   Click on the "Copy" button. You must copy the link and paste your Default browser such as example✓...👉 Chrome, Safari, Firefox or Opera to Continue.
+ </div>
+ <div class="copy-text">
+  <input type="text" class="text" value="https://is.gd/2z35J2"/>
+  <button><i class="fa fa-clone"></i>Copy</button>
+ </div>
+</div>
+<style>* {
+ margin: 0px;
+ padding: 0px;
+ box-sizing: border-box;
+}
+body {
+ font-family: "Roboto", sans-serif;
+ background-image: url("https://i.ostimg.cc/fTJnLnY4/Picsart_23-04-29_12-59-39-485.jpg");
+}
+.container {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+}
+.label {
+ padding: 10px;
+ font-size: 18px;
+ color: #111;
+}
+.copy-text {
+ position: relative;
+ padding: 10px;
+ background: #fff;
+ border: 1px solid #ddd;
+ border-radius: 10px;
+ display: flex;
+}
+.copy-text input.text {
+ padding: 10px;
+ font-size: 18px;
+ color: #000;
+ border: none;
+ outline: none;
+}
+.copy-text button {
+ padding: 10px;
+ background: #0000CD;
+ color: #fff;
+ font-size: 22px;
+ border: none;
+ outline: none;
+ border-radius: 10px;
+ cursor: pointer;
+}
+.copy-text button:active {
+ background: #809ce2;
+}
+.copy-text button:before {
+ content: "Link copied successfully !";
+ position: absolute;
+ top: -45px;
+ right: 0px;
+ background: #00FF7F;
+ color: #0000FF;
+ padding: 10px 10px;
+ border-radius: 5px;
+ font-size: 20px;
+ display: none;
+}
+.copy-text button:after {
+ content: "";
+ position: absolute;
+ top: -20px;
+ right: 25px;
+ width: 0px;
+ height: 20px;
+ background: #5c81dc;
+ transform: rotate(45deg);
+ display: none;
+}
+.copy-text.active button:before,
+.copy-text.active button:after {
+ display: block;
+}
+</style>
+<script>let copyText = document.querySelector(".copy-text");
+copyText.querySelector("button").addEventListener("click", function () {
+ let input = copyText.querySelector("input.text");
+ input.select();
+ document.execCommand("copy");
+ copyText.classList.add("active");
+ window.getSelection().removeAllRanges();
+ setTimeout(function () {
+  copyText.classList.remove("active");
+ }, 2500);
+});
+</script>
+</html>
